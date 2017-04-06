@@ -1,0 +1,26 @@
+{
+  "name": "ivyleaf-poker-league-updater",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/**/*.js",
+    "lint": "eslint ./",
+    "watch": "gulp watch --gulpfile gulpfile.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodhall85/ivyleaf-poker-league-updater.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodhall85/ivyleaf-poker-league-updater/issues"
+  },
+  "homepage": "https://github.com/rodhall85/ivyleaf-poker-league-updater#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "mocha": "^3.2.0"
+  }
+}

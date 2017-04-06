@@ -1,0 +1,31 @@
+[{
+  "player": "Rod",
+  "results": [
+    {"date":"2017-01-01", "points":1},
+    {"date":"2017-01-08", "points":3}
+  ],
+  "points": 4,
+  "position": 1
+}, {
+  "player": "Daryl",
+  "results": [
+    {"date":"2017-01-01", "points":3}
+  ],
+  "points": 3,
+  "position": 2
+}, {
+  "player": "Bonnie",
+  "results": [
+    {"date":"2017-01-01", "points":2},
+    {"date":"2017-01-08", "points":1}
+  ],
+  "points": 3,
+  "position": 3
+}, {
+  "player": "Graham",
+  "results": [
+    {"date":"2017-01-08", "points":2}
+  ],
+  "points": 2,
+  "position": 4
+}]
