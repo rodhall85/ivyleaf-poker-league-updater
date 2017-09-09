@@ -17,10 +17,9 @@ function build(posts) {
 
   return league;
 
-  console.log('league', util.inspect(league, {showHidden: false, depth: null}));
-
-
   function parsePost(post, backwards) {
+    if (!post.message) return;
+
     const firstIndex = post.message.indexOf('1st');
     const secondIndex = post.message.indexOf('2nd');
     const thirdIndex = post.message.indexOf('3rd');
@@ -65,6 +64,12 @@ function build(posts) {
         .split(' ')[0]
         .replace('.', '');
 
+      playerName = capitalizeFirstLetter(playerName);
+
+      function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+      }
+
       const aliases = playerAliases.filter(player => {
         return player.aliases.filter(alias => {
           return alias === playerName;
@@ -108,9 +113,11 @@ function build(posts) {
 
   function calculatePoints() {
     league.map(entry => {
+      console.log(entry.results);
       if (entry.results.length > 1) {
-        entry.points = entry.results.reduce((a,b) => {
-          return a.points + b.points;
+        console.log('will calculate');
+        entry.points = entry.results.map(result => result.points).reduce((a,b) => {
+          return a + b;
         });
       }
       else {
