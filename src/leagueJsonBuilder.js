@@ -113,9 +113,7 @@ function build(posts) {
 
   function calculatePoints() {
     league.map(entry => {
-      console.log(entry.results);
       if (entry.results.length > 1) {
-        console.log('will calculate');
         entry.points = entry.results.map(result => result.points).reduce((a,b) => {
           return a + b;
         });
